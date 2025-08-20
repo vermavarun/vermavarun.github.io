@@ -11,6 +11,9 @@ on:
       - 'resume.tex'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-resume:
     runs-on: ubuntu-latest
