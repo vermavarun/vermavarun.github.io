@@ -1,0 +1,81 @@
+name: Build and Update Resume PDF
+
+on:
+  push:
+    branches: [ main, resume ]
+    paths:
+      - 'resume.tex'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'resume.tex'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup LaTeX environment
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: resume.tex
+        latexmk_use_xelatex: false
+        latexmk_shell_escape: true
+
+    - name: Check if PDF was generated
+      run: |
+        if [ -f "resume.pdf" ]; then
+          echo "PDF generated successfully"
+          ls -la resume.pdf
+        else
+          echo "PDF generation failed"
+          exit 1
+        fi
+
+    - name: Rename PDF to include name
+      run: |
+        if [ -f "resume.pdf" ]; then
+          cp resume.pdf Varun-Verma_lead.pdf
+          echo "PDF renamed to Varun-Verma_lead.pdf"
+        fi
+
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Check for changes
+      id: changes
+      run: |
+        git add Varun-Verma_lead.pdf
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "Changes detected"
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit and push changes
+      if: steps.changes.outputs.changed == 'true'
+      run: |
+        git commit -m "Auto-update resume PDF from LaTeX source [skip ci]"
+        git push
+
+    - name: Upload PDF as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-pdf
+        path: |
+          resume.pdf
+          Varun-Verma_lead.pdf
+        retention-days: 30
