@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  latex:
+    image: blang/latex:ctanfull
+    volumes:
+      - .:/data
+    working_dir: /data
+    command: ["-interaction=nonstopmode", "-jobname=Varun-Verma_lead_local", "resume.tex"]
+    entrypoint: ["pdflatex"]
+    restart: "no"
+    environment:
+      - TZ=Asia/Kolkata
+# This will produce Varun-Verma_lead.pdf directly from resume.tex
