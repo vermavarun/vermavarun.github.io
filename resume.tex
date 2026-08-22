@@ -1,276 +1,245 @@
 %-------------------------
-% Resume in Latex
-% Author : Varun Verma
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Principal Backend / Platform Engineering Resume
+% Author: Varun Verma
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 
-\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{latexsym}
+\usepackage{marvosym}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.55in}
+\addtolength{\textheight}{1.1in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generated pdf is machine-readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{#1 \vspace{-2pt}}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Varun Verma} \\ \vspace{1pt}
-    \small +91-9996470791 $|$ \href{mailto:vermavarun@outlook.com}{\underline{vermavarun@outlook.com}} $|$
-    \href{https://linkedin.com/in/varunve}{\underline{linkedin.com/in/varunve}} $|$
-    \href{https://github.com/vermavarun}{\underline{github.com/vermavarun}}
+    {\Huge \scshape \textbf{Varun Verma}} \\ \vspace{2pt}
+    \small
+    Principal Software Engineer \textbar{} Backend \& Distributed Systems \textbar{} Cloud Architecture
+    \\ \vspace{2pt}
+    \small +91-9996470791 $|$
+    \href{mailto:vermavarun@outlook.com}{vermavarun@outlook.com} $|$
+    \href{https://linkedin.com/in/varunve}{linkedin.com/in/varunve} $|$
+    \href{https://github.com/vermavarun}{github.com/vermavarun}
 \end{center}
 
-%-----------Objective------------
-\section{Objective}
-  {Results-driven AI Platform Engineer and Cloud Architect with 13+ years of expertise designing, deploying, and operating enterprise-scale AI/ML systems, LLMOps platforms, and autonomous operations infrastructure. Specialized in AI Agents, MCP servers, RAG pipelines, LLM inference at scale, Kubernetes-based platform engineering, and AI observability. Track record of delivering measurable impact: reduced operational overhead by 97\%, improved ML model relevance by 20-25\%, architected AI systems serving 10M+ global users, and contributed \$180K+ in business value.}
+%-----------SUMMARY-----------
+\section{Executive Summary}
+\small{
+Principal-level software engineer and technical lead with 14+ years of experience architecting and delivering enterprise backend platforms, distributed systems, event-driven services, cloud-native infrastructure, and developer platforms across Azure, AWS, and GCP. Deep hands-on expertise in .NET/C\#, Python, Go, APIs, microservices, Kafka, data platforms, Kubernetes, observability, identity, and Infrastructure as Code. Experienced in owning architecture from system design and API contracts through reliability, security, deployment, disaster recovery, and operational excellence. Increasingly applying AI/ML and LLM capabilities to backend platforms and engineering automation, while keeping distributed backend architecture, scalability, and platform engineering as the primary focus.
+}
 
+%-----------CORE EXPERTISE-----------
+\section{Core Architecture Expertise}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Backend Architecture:} Distributed systems, microservices, modular monoliths, REST APIs, event-driven architecture, asynchronous processing, integration platforms, API gateways, SDK design, service-to-service communication \\
+\textbf{Distributed Systems:} Apache Kafka, Confluent Cloud, consumer groups, partitioning, retries, idempotency, fault tolerance, disaster recovery, active/active and failover patterns, high availability \\
+\textbf{Cloud \& Platform Engineering:} Azure, AWS, GCP, Kubernetes, Docker, Terraform, Bicep, ARM, CloudFormation, GitOps, platform-as-a-product, reusable infrastructure patterns \\
+\textbf{Reliability \& Operations:} 99.9\%+ availability, observability, OpenTelemetry, Prometheus, Grafana, distributed tracing, structured logging, performance engineering, incident response, SRE practices \\
+\textbf{Security \& Identity:} OAuth2, JWT, SAML 2.0, SSO, Azure AD, MFA, TLS, RBAC, enterprise identity and access-control architecture \\
+\textbf{Data \& Integration:} SQL Server, PostgreSQL, Oracle, MongoDB, Cosmos DB, DynamoDB, Redis, Elasticsearch, Spark, Databricks, Airflow, Azure Data Factory \\
+\textbf{AI/ML \& LLM Engineering:} SageMaker, Azure ML, ML pipelines, RAG, embeddings, LangChain, LangGraph, AI agents, MCP, model observability and AI-assisted automation
+}}
+\end{itemize}
 
 %-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+\section{Professional Experience}
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Shell, Bangalore}{April 2022 -- Present}
-      {Senior Technical Lead}{}
-      \resumeItemListStart
-        \resumeItem{Architected and deployed production MLOps and LLMOps pipelines using AWS SageMaker and Apache Airflow, enabling automated model training, LLM fine-tuning, and deployment with 99.9\% uptime SLA.}
-        \resumeItem{Developed Python and .Net SDKs for Confluent Kafka APIs with OAuth2 authentication, processing 10M+ real-time events daily with disaster recovery capabilities.}
-        \resumeItem{Created ML-powered extraction logic using AWS Textract and custom NLP models, converting unstructured PDFs to structured data with 94\% accuracy, processing 100K+ documents monthly.}
-        \resumeItem{Reduced operational toil by 97\% (9 hours to 5 minutes) through automated infrastructure provisioning with Azure DevOps and GitHub Actions.}
-        \resumeItem{Designed Apache Airflow pipelines integrating edge device data to centralized ML platforms, eliminating third-party costs and enabling real-time analytics.}
-        \resumeItem{Developed automated AWS multi-account provisioning using infrastructure-as-code, reducing setup time from days to minutes across 50+ accounts.}
-        \resumeItem{Built backend microservices with enterprise SSO (SAML 2.0, OAuth2) securing access for 1000+ users with 99.99\% availability.}
-        \resumeItem{Designed agentic AI workflows using LangGraph and LangChain for autonomous incident response, root cause analysis, and infrastructure remediation, reducing mean time to resolution by 60\%.}
-        \resumeItem{Implemented AI observability platform using OpenTelemetry and Prometheus, monitoring LLM latency, token utilization, prompt quality, and hallucination rates across production AI workloads.}
-      \resumeItemListEnd
+\resumeSubheading
+  {Shell, Bangalore}{April 2022 -- Present}
+  {Senior Technical Lead}{}
+\resumeItemListStart
+  \resumeItem{Provide technical leadership for enterprise backend, event-streaming, cloud platform, and AI/ML engineering initiatives, driving architecture, design reviews, implementation strategy, reliability, security, and operational readiness.}
+  \resumeItem{Architected and developed .NET and Python SDKs for Confluent Kafka APIs with OAuth2 authentication, simplifying enterprise integration and supporting 10M+ real-time events daily with disaster-recovery capabilities.}
+  \resumeItem{Designed backend microservices secured with enterprise SSO using SAML 2.0 and OAuth2, supporting 1,000+ users with 99.99\% availability.}
+  \resumeItem{Designed event-driven integration and data pipelines using Apache Kafka and Apache Airflow, including edge-to-cloud ingestion patterns and resilient processing workflows.}
+  \resumeItem{Engineered automated multi-account AWS provisioning using Infrastructure as Code, reducing environment setup from days to minutes across 50+ accounts.}
+  \resumeItem{Reduced operational toil by 97\%, from approximately 9 hours to 5 minutes, through automated infrastructure provisioning and delivery using Azure DevOps and GitHub Actions.}
+  \resumeItem{Architected production MLOps and LLMOps pipelines using AWS SageMaker and Apache Airflow, integrating model training, validation, deployment, and operational controls with 99.9\% uptime SLA.}
+  \resumeItem{Built ML-powered document-processing services using AWS Textract and custom NLP models, processing 100K+ documents monthly with 94\% extraction accuracy.}
+  \resumeItem{Designed agentic AI workflows using LangGraph and LangChain for incident response, root-cause analysis, and infrastructure remediation, reducing mean time to resolution by 60\%.}
+  \resumeItem{Implemented production observability using OpenTelemetry and Prometheus across backend and AI workloads, covering latency, resource utilization, traces, and model-specific operational signals.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Deloitte, Gurgaon}{February 2021 -- April 2022}
-      {Manager (Architect)}{}
-      \resumeItemListStart
-        \resumeItem{Designed AI-enhanced microservices architecture for fintech client, integrating ML-based fraud detection models with real-time payment processing pipelines.}
-        \resumeItem{Architected multi-region ML model replication service with end-to-end encryption, achieving 99.99\% availability across 5 geographic regions.}
-        \resumeItem{Developed custom Terraform provider and modules codifying 500+ on-premises infrastructure resources, reducing manual configuration by 80\%.}
-        \resumeItem{Strategized and secured \$180K business through innovative AI/ML consulting solutions and enterprise architecture recommendations.}
-        \resumeItem{Automated GitHub and SonarQube onboarding using Azure Logic Apps, reducing setup time from 3 days to 30 minutes for 200+ developers.}
-      \resumeItemListEnd
+\resumeSubheading
+  {Deloitte, Gurgaon}{February 2021 -- April 2022}
+  {Manager (Architect)}{}
+\resumeItemListStart
+  \resumeItem{Led solution architecture for enterprise applications, with emphasis on backend service decomposition, integration, security, cloud architecture, and automation.}
+  \resumeItem{Designed AI-enhanced microservices architecture for a fintech platform, integrating ML-based fraud detection with real-time payment-processing workflows.}
+  \resumeItem{Architected a multi-region model replication service with end-to-end encryption, targeting 99.99\% availability across five geographic regions.}
+  \resumeItem{Developed a custom Terraform provider and reusable modules codifying 500+ infrastructure resources, reducing manual configuration by 80\%.}
+  \resumeItem{Automated GitHub and SonarQube onboarding using Azure Logic Apps, reducing developer setup from three days to approximately 30 minutes for 200+ developers.}
+  \resumeItem{Contributed \$180K+ in business value through technical consulting, architecture recommendations, and AI/ML solution strategy.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Nagarro, Gurgaon}{June 2014 -- February 2021}
-      {Associate Staff Engineer}{}
-      \resumeItemListStart
-        \resumeItem{Led architecture and implementation of ML-optimized search platform, improving relevance by 25\% through custom ranking algorithms and embedding-based similarity search.}
-        \resumeItem{Designed and deployed intelligent chatbots using MS Bot Framework and Google Dialogflow with NLP, handling 50K+ customer interactions monthly with 85\% resolution rate.}
-        \resumeItem{Mentored 4+ engineers in full-stack development, unit testing, ML fundamentals, and cloud-native architecture patterns.}
-        \resumeItem{Automated data update processes using orchestration frameworks, reducing manual effort by 70\% and improving data freshness to near real-time.}
-      \resumeItemListEnd
+\resumeSubheading
+  {Nagarro, Gurgaon}{June 2014 -- February 2021}
+  {Associate Staff Engineer}{}
+\resumeItemListStart
+  \resumeItem{Designed and implemented enterprise backend and search platforms, owning technical design, integration, performance, and delivery across multiple client engagements.}
+  \resumeItem{Led architecture of an enterprise search platform serving 10M+ monthly users, supporting 100K+ concurrent searches with sub-100ms latency and 99.9\% availability.}
+  \resumeItem{Designed connectors and synchronization services integrating 15+ heterogeneous data sources into a unified search platform.}
+  \resumeItem{Improved search relevance by 20--25\% using ML-based ranking, semantic search, embeddings, and recommendation techniques.}
+  \resumeItem{Designed conversational backend solutions using Microsoft Bot Framework and Google Dialogflow, supporting 50K+ customer interactions monthly with an 85\% resolution rate.}
+  \resumeItem{Automated data processing and orchestration workflows, reducing manual effort by 70\% and improving data freshness to near real time.}
+  \resumeItem{Mentored engineers on backend engineering, unit testing, cloud-native architecture, ML fundamentals, and engineering best practices.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Amdocs India Limited, Pune}{Aug 2012 -- April 2014}
-      {Subject Matter Expert}{}
-      \resumeItemListStart
-        \resumeItem{Configured and implemented enterprise SharePoint Search.}
-        \resumeItem{Created web portals using front-end technologies.}
-        \resumeItem{Developed WCF Windows Service to expose portal data to consumers.}
-      \resumeItemListEnd
+\resumeSubheading
+  {Amdocs India Limited, Pune}{August 2012 -- April 2014}
+  {Subject Matter Expert}{}
+\resumeItemListStart
+  \resumeItem{Implemented enterprise SharePoint Search and backend integration components for portal platforms.}
+  \resumeItem{Developed WCF Windows Services to expose portal data to downstream consumers and integrated enterprise web portals with backend services.}
+\resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
+%-----------SELECTED ARCHITECTURE WORK-----------
+\section{Selected Architecture \& Engineering Work}
+\resumeSubHeadingListStart
 
-        \resumeProjectHeading
-          {\textbf{Created dotnet and python SDKs for Confluent Kafka with OAuth }}{}
-          \resumeItemListStart
-            \resumeItem{Developed SDKs to simplify integration with Confluent Kafka APIs for trading applications.}
-            \resumeItem{Implemented features to enhance performance and reliability of data streaming.}
-            \resumeItem{Disaster Recovery Capabilities with active cluster switching details.}
-          \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Enterprise Event Streaming SDKs -- .NET \& Python / Confluent Kafka}}{}
+\resumeItemListStart
+  \resumeItem{Designed reusable SDKs for consuming Confluent Kafka platform APIs with OAuth2, standardizing authentication, integration, error handling, and operational behavior for backend consumers.}
+  \resumeItem{Addressed reliability and disaster-recovery requirements including active-cluster switching and resilient event-stream processing.}
+\resumeItemListEnd
 
-        \resumeProjectHeading
-          {\textbf{Cross Organization Information Analysis}}{}
-          \resumeItemListStart
-            \resumeItem{Architected data integration platform ingesting from 20+ APIs, processing 500K+ records daily with 99.8\% accuracy using Apache Airflow.}
-            \resumeItem{Implemented ML-based data quality framework detecting anomalies with 92\% precision using isolation forests and statistical methods.}
-            \resumeItem{Developed transformation pipelines using Azure Data Factory and Databricks, handling multi-terabyte datasets with complex ETL operations.}
-            \resumeItem{Built automated Power BI dashboards refreshing every 4 hours, providing real-time insights to 200+ stakeholders.}
-            \resumeItem{Integrated Azure Translator APIs enabling document processing in 25+ languages, expanding reach to global markets.}
-            \resumeItem{Implemented RBAC using Azure AD, securing sensitive data access for 500+ users across 5 business units.}
-          \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Enterprise Search \& Distributed Backend Platform}}{}
+\resumeItemListStart
+  \resumeItem{Architected distributed search services and connectors for 15+ heterogeneous data sources, supporting 10M+ monthly users and 100K+ concurrent searches.}
+  \resumeItem{Used Elasticsearch, caching, semantic retrieval, ML ranking, and asynchronous synchronization pipelines to achieve sub-100ms search latency and 99.9\% availability.}
+\resumeItemListEnd
 
-      \resumeProjectHeading
-          {\textbf{Wind Farm Power Generation NLP}}{}
-          \resumeItemListStart
-            \resumeItem{Built end-to-end NLP pipeline extracting structured data from unstructured PDFs using AWS Textract and custom ML models with 94\% accuracy, processing 10K+ documents.}
-            \resumeItem{Developed SageMaker-based ML models for automated document classification, entity extraction, and validation, reducing manual data entry from 40 hours to 2 hours weekly.}
-            \resumeItem{Implemented MLOps infrastructure with automated model training, validation, A/B testing, and deployment, reducing time-to-production from 2 weeks to 1 day.}
-            \resumeItem{Built real-time monitoring dashboards with CloudWatch, achieving 99.5\% SLA compliance for data pipeline availability.}
-            \resumeItem{Integrated data quality checks using statistical methods and isolation forests, catching 95\% of data quality issues before production.}
-            \resumeItem{Streamlined quarterly reporting for 50+ wind farm clients, reducing manual reporting time by 85\%.}
-          \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Cross-Organization Information Analysis Platform}}{}
+\resumeItemListStart
+  \resumeItem{Architected an integration platform ingesting data from 20+ APIs and processing 500K+ records daily using Apache Airflow, Azure Data Factory, and Databricks.}
+  \resumeItem{Implemented data-quality, transformation, RBAC, and multilingual processing capabilities for 500+ users across five business units.}
+\resumeItemListEnd
 
-      \resumeProjectHeading
-          {\textbf{Energy Savings Marketing Portal}}{}
-          \resumeItemListStart
-            \resumeItem{Designed ML-powered recommendation engine using collaborative filtering, increasing vendor match accuracy by 35\%.}
-            \resumeItem{Optimized API performance through caching and ML-based prediction, reducing latency from 800ms to 680ms (15\% improvement).}
-            \resumeItem{Implemented enterprise SSO with SAML 2.0 and ML-optimized search results, improving user conversion by 22\%.}
-            \resumeItem{Automated deployment using Azure DevOps, reducing deployment time by 30\% and enabling 10+ daily releases.}
-            \resumeItem{Enhanced security with OAuth2, TLS 1.3, and ML-based fraud detection achieving 98\% precision.}
-            \resumeItem{Achieved 99.95\% service availability through multi-region active-active deployment and automated failover.}
-          \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Document Intelligence Backend Platform}}{}
+\resumeItemListStart
+  \resumeItem{Built backend processing pipelines for unstructured documents using AWS Textract, NLP, and SageMaker, processing 10K+ documents in the project and reducing manual reporting effort by 85\%.}
+  \resumeItem{Implemented automated training, validation, deployment, monitoring, and data-quality controls, reducing time-to-production from two weeks to one day.}
+\resumeItemListEnd
 
-      \resumeProjectHeading
-          {\textbf{Hyper Automation Templates with AI/ML}}{}
-          \resumeItemListStart
-            \resumeItem{Engineered boilerplate ML project templates with pre-configured frameworks (TensorFlow, PyTorch), reducing setup time by 40\% for 150+ developers.}
-            \resumeItem{Integrated AWS Textract and custom OCR libraries (Tesseract, EasyOCR) for Python and Node.js across 20+ enterprise applications.}
-            \resumeItem{Built end-to-end CI/CD pipelines with automated testing, model validation gates, and performance benchmarks using GitHub Actions.}
-            \resumeItem{Implemented Infrastructure as Code templates for quick ML environment provisioning (notebooks, GPU clusters, monitoring).}
-            \resumeItem{Created documentation adopted across organization, reducing developer onboarding from 2 weeks to 3 days.}
-          \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Enterprise Automation \& Developer Platform}}{}
+\resumeItemListStart
+  \resumeItem{Engineered reusable infrastructure and CI/CD patterns with Terraform, GitHub Actions, and Azure DevOps for repeatable cloud provisioning and software delivery.}
+  \resumeItem{Created standardized project templates and engineering documentation adopted across teams, reducing developer onboarding from two weeks to three days.}
+\resumeItemListEnd
 
-       \resumeProjectHeading
-          {\textbf{Enterprise Search with ML Optimization}}{}
-          \resumeItemListStart
-            \resumeItem{Built large-scale search platform serving 10M+ monthly users globally, handling 100K+ concurrent searches with sub-100ms latency.}
-            \resumeItem{Implemented ML-based ranking using LambdaMART and neural networks, improving relevance by 20\% and user satisfaction by 28\%.}
-            \resumeItem{Developed custom connectors integrating 15+ heterogeneous data sources with automated sync pipelines.}
-            \resumeItem{Built semantic search using BERT and sentence transformers, achieving 35\% improvement over keyword search.}
-            \resumeItem{Implemented faceted search, AI-powered autocomplete, and personalized recommendations using collaborative filtering.}
-            \resumeItem{Achieved 99.9\% availability using distributed Elasticsearch clusters across 3 regions with sophisticated caching reducing load by 60\%.}
-          \resumeItemListEnd
-
-
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python (primary), Go (Golang), C\#, .Net, Java, C++, Node.js, TypeScript, JavaScript, R, SQL, HTML/CSS.} \\
-     \textbf{ML/AI Frameworks}{: TensorFlow, PyTorch, Scikit-learn, XGBoost, LightGBM, Keras, Hugging Face Transformers, spaCy.} \\
-     \textbf{ML Platforms}{: AWS SageMaker, Azure ML Studio, Google AI Platform, Databricks, KServe, Triton Inference Server, BentoML, Weights \& Biases, mlflow, Kubeflow, Ray.} \\
-     \textbf{NLP/LLM}{: AWS Textract, LangChain, LangGraph, LLamaIndex, FAISS, embedding models, fine-tuning, RAG, prompt engineering, Transformers, AI Agents, Agentic AI, MCP.} \\
-     \textbf{Cloud Platforms}{: AWS (SageMaker, EC2, S3, Lambda, RDS, Textract, DynamoDB, CloudWatch), Azure (ML, Data Factory, Functions, App Service), GCP (AI Platform, BigQuery).} \\
-     \textbf{Data Engineering}{: Apache Airflow, Apache Spark, Pandas, NumPy, PySpark, Delta Lake, Azure Data Factory, Databricks.} \\
-     \textbf{Containers/Orchestration}{: Docker, Kubernetes, EKS, AKS, Helm, Docker Compose, ArgoCD, GitOps, Service Mesh (Istio).} \\
-     \textbf{Infrastructure as Code}{: Terraform, ARM Templates, Bicep, CloudFormation, Ansible.} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, Cosmos DB, MSSQL, Oracle, DynamoDB, Redis, Elasticsearch.} \\
-     \textbf{DevOps/MLOps}{: GitHub Actions, Azure DevOps, GitLab CI, mlflow, DVC, Prometheus, Grafana, OpenTelemetry, Jaeger, New Relic, ELK Stack.} \\
-     \textbf{Identity \& Security}{: FIDO, WebAuthn, SSO, SAML 2.0, OAuth2, JWT, Azure AD, identity management protocols, MFA.} \\
-     \textbf{Web Frameworks}{: React, Angular, .Net Core, ASP.Net, Express.js, FastAPI.} \\
-     \textbf{Tools}{: Visual Studio Code, Git, Jira, Postman, TensorBoard, Jupyter, VS Studio, Confluence.} \\
-     \textbf{OS}{: Linux (Ubuntu, CentOS), macOS, Windows.}
-    }}
- \end{itemize}
-
- %-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {MMU, Ambala, India}{2008 -- 2012}
-      {Bachelor of Technology [B.Tech] in Computer Science and Engineering}{}
-  \resumeSubHeadingListEnd
-
-%-----------KEY ACHIEVEMENTS-----------
-\section{Key Achievements}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Operational Excellence}{: Reduced operational overhead by 97\% (9 hours to 5 minutes) through intelligent automation} \\
-     \textbf{ML Impact}{: Improved search relevance by 20-25\% through advanced ML algorithms and semantic search} \\
-     \textbf{Scale \& Performance}{: Architected systems serving 10M+ users with sub-100ms latency and 99.99\% availability} \\
-     \textbf{Business Value}{: Contributed to \$180K+ business revenue and cost savings of 60\%+ through innovation} \\
-     \textbf{Data Intelligence}{: Built pipelines processing 500K+ records daily with 99.8\% data quality} \\
-     \textbf{Team Leadership}{: Mentored 50+ engineers in cloud architecture, ML, and DevOps best practices} \\
-     \textbf{Technology Innovation}{: Designed and deployed 15+ production ML models with 80-98\% accuracy metrics} \\
-    }}
- \end{itemize}
-
-%-----------PERSONAL INFORMATION-----------
-\section{Personal Information}
 \begin{itemize}[leftmargin=0.15in, label={}]
-    \item {Father’s Name: Late Sh. Baldev Raj Verma}
+\small{\item{
+\textbf{Languages:} C\#, .NET, Python, Go, Java, C++, Node.js, TypeScript, JavaScript, SQL \\
+\textbf{Backend:} ASP.NET Core, Web API, REST, microservices, WCF, FastAPI, Express.js, API design, SDK development, asynchronous processing \\
+\textbf{Messaging:} Apache Kafka, Confluent Cloud, event-driven architecture, streaming, consumer groups, OAuth2 integrations \\
+\textbf{Cloud:} Azure, AWS, GCP; App Service, Functions, Azure ML, Data Factory, SageMaker, EC2, S3, Lambda, RDS, DynamoDB, CloudWatch \\
+\textbf{Cloud Native:} Docker, Kubernetes, AKS, EKS, Helm, Docker Compose, ArgoCD, GitOps, Istio \\
+\textbf{Infrastructure:} Terraform, Bicep, ARM Templates, CloudFormation, Ansible, Azure DevOps, GitHub Actions, GitLab CI \\
+\textbf{Databases:} SQL Server, PostgreSQL, Oracle, MongoDB, Cosmos DB, DynamoDB, Redis, Elasticsearch \\
+\textbf{Observability:} OpenTelemetry, Prometheus, Grafana, Jaeger, New Relic, ELK Stack, distributed tracing, metrics, structured logging \\
+\textbf{Security:} OAuth2, JWT, SAML 2.0, SSO, Azure AD, MFA, RBAC, TLS, identity and access management \\
+\textbf{AI/ML:} AWS SageMaker, Azure ML, Databricks, TensorFlow, PyTorch, Scikit-learn, Hugging Face, LangChain, LangGraph, RAG, embeddings, AI Agents, MCP \\
+\textbf{Data Engineering:} Apache Airflow, Apache Spark, PySpark, Azure Data Factory, Databricks, Pandas, NumPy, Delta Lake
+}}
 \end{itemize}
+
+%-----------LEADERSHIP-----------
+\section{Principal-Level Leadership}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Architecture Ownership:} System design, architecture reviews, technical strategy, API contracts, non-functional requirements, scalability, resilience, security, and production readiness. \\
+\textbf{Technical Leadership:} Cross-team technical direction, engineering standards, reusable platform capabilities, mentoring, design reviews, and complex problem solving. \\
+\textbf{Platform Thinking:} Build reusable capabilities rather than one-off applications; standardize infrastructure, APIs, integrations, observability, security, and developer workflows. \\
+\textbf{Engineering Excellence:} Automation-first delivery, measurable reliability, performance optimization, operational simplicity, disaster recovery, and continuous improvement.
+}}
+\end{itemize}
+
+%-----------KEY IMPACT-----------
+\section{Selected Impact}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Scale:} Architected backend/search systems serving 10M+ users with sub-100ms latency and 99.9\%+ availability. \\
+\textbf{Streaming:} Supported 10M+ real-time events daily through Kafka-based enterprise integration. \\
+\textbf{Automation:} Reduced operational effort by 97\%, from approximately 9 hours to 5 minutes. \\
+\textbf{Cloud Platform:} Automated provisioning across 50+ AWS accounts and codified 500+ infrastructure resources. \\
+\textbf{Business Value:} Contributed \$180K+ through architecture and technology consulting initiatives. \\
+\textbf{AI Enablement:} Applied ML/LLM capabilities to search, document intelligence, MLOps/LLMOps, observability, and autonomous operational workflows.
+}}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {MMU, Ambala, India}{2008 -- 2012}
+  {Bachelor of Technology (B.Tech), Computer Science and Engineering}{}
+\resumeSubHeadingListEnd
 
 \end{document}
